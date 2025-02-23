@@ -1,0 +1,227 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+:root {
+  --primary-color: #4CAF50; /* Main theme color */
+  --secondary-color: #2E7D32; /* Darker green for contrast */
+  --bg-color: #F5F5F5; /* Light background */
+  --text-color: #333; /* Standard readable text color */
+  --card-bg: #fff; /* White card backgrounds */
+  --shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+  --border-radius: 10px; /* Smooth rounded corners */
+  --transition: all 0.3s ease-in-out; /* Smooth effects */
+}
+/* we call this global style  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  
+}
+body{
+  background: linear-gradient(
+    135deg,
+    rgb(84, 195, 243) 0%,
+    rgb(212, 188, 188) 50%,
+    rgb(82, 73, 73) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: lato sans-serif;
+}
+.container{
+  margin: 20px auto;
+  padding: 5px;
+  width: 400pxs;
+  background: linear-gradient(rgb(124, 141, 142) ,rgb(201, 201, 201));
+
+}
+
+h1{
+  letter-spacing: 1px;
+  margin: 0;
+  text-align: center;
+  color: black
+}
+
+h3{
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  margin: 40px 0 30px;
+}
+h4{
+  margin: 0;
+  text-transform: uppercase;
+}
+.inc-exp-container {
+  display: flex;
+  justify-content: space-between;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin: 20px 0;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Each section (Income & Expense) should be in a column layout */
+.inc-exp-container div {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Fix: Makes the amount go under */
+  align-items: center;
+  text-align: center;
+}
+
+/* Income & Expense Headings */
+.inc-exp-container h4 {
+  font-size: 16px;
+  color: var(--text-color);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+/* Income Styling */
+#money-plus {
+  color: var(--primary-color);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Expense Styling */
+#money-minus {
+  color: red;
+  font-size: 20px;
+  font-weight: 600;
+}
+/* Transaction List Container */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* History Title */
+h3 {
+  font-size: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+/* Transaction Items */
+.list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Income (Green) */
+.list .plus {
+  border-right: 5px solid #2ecc71;
+  color: #2ecc71;
+}
+
+/* Expense (Red) */
+.list .minus {
+  border-right: 5px solid #e74c3c;
+  color: #e74c3c;
+}
+
+/* Delete Button */
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+/* Hover effect on list items */
+.list li:hover {
+  transform: scale(1.02);
+}
+
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Labels */
+.form-control label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Inputs */
+.form-control input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+.form-control input:focus {
+  border-color: #2ecc71;
+  outline: none;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #2ecc71;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+.btn:hover {
+  background: #27ae60;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  form {
+      padding: 15px;
+  }
+}
